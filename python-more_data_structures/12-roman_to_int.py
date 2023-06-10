@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
                 "L": 50, "X": 10, "V": 5, "I": 1}
         for i, c in enumerate(roman_string):
             num += numerals[c]
-            if i > 0:
-                if numerals[c] < numerals[roman_string[i - 1]]:
+            if i < len(roman_string) - 1:
+                if numerals[c] < numerals[roman_string[i + 1]]:
                     num -= numerals[c] * 2
     return num
