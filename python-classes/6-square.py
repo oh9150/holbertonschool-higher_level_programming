@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines a class Square"""
+
+
 class Square:
     """Defines a square"""
     def __init__(self, size=0, position=(0, 0)):
@@ -38,6 +40,7 @@ class Square:
                 self.__size = value
         else:
             raise TypeError("size must be an integer")
+
     @property
     def position(self):
         """Returns the position of a square
@@ -45,6 +48,7 @@ class Square:
             The current position of the square
         """
         return self.__position
+
     @position.setter
     def position(self, value):
         """Sets the position of the square
@@ -59,7 +63,7 @@ class Square:
                 and value[1] >= 0):
             self.__position = value
         else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """Prints the square"""
