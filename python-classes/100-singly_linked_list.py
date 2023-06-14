@@ -33,7 +33,7 @@ class Node:
         else:
             raise TypeError("data must be an integer")
     @property
-    def next_node(self)
+    def next_node(self):
         """Returns the next node
         Returns:
             The next node
@@ -65,7 +65,7 @@ class SinglyLinkedList:
         while tmp is not None:
             retstr += (str(tmp.data) + "\n")
             tmp = tmp.next_node
-        return retstr
+        return retstr[:-1]
 
     def sorted_insert(self, value):
         """Inserts a node inside the list with the correct sorted position
@@ -78,8 +78,12 @@ class SinglyLinkedList:
         if tmp == None:
             self.__head = new_node
             return
+        if tmp.data > value:
+            self.__head = new_node
+            new_node.next_node = tmp
+            return
 
-        while tmp.next_node is not None and tmp.data < value:
+        while tmp.next_node is not None and tmp.next_node.data < value:
             tmp = tmp.next_node
         new_node.next_node = tmp.next_node
         tmp.next_node = new_node
