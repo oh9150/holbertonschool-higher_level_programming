@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-"""Defines a class Node"""
-
+"""Defines a class Node and a class SinglyLinkedList"""
 
 
 class Node:
-    """Defines a node of a singly linked list
-    Args:
-        data (int): The data inside the node
-        next_node (Node): The next node
-    """
+    """Defines a node of a singly linked list"""
+
     def __init__(self, data, next_node=None):
-        """Instantiates a linked list node"""
+        """Instantiates a linked list node
+        Args:
+            data (int): the value of the node
+            next_node (Node): the next node
+        """
         self.data = data
         self.next_node = next_node
 
@@ -32,6 +32,7 @@ class Node:
             self.__data = value
         else:
             raise TypeError("data must be an integer")
+
     @property
     def next_node(self):
         """Returns the next node
@@ -50,7 +51,11 @@ class Node:
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
+
+
 class SinglyLinkedList:
+    """Defines a singly linked list"""
+
     def __init__(self):
         """Simple instantation, sets the head to None"""
         self.__head = None
@@ -75,7 +80,7 @@ class SinglyLinkedList:
         """
         new_node = Node(value)
         tmp = self.__head
-        if tmp == None:
+        if tmp is None:
             self.__head = new_node
             return
         if tmp.data > value:
