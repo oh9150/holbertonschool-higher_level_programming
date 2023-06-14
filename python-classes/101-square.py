@@ -80,7 +80,10 @@ class Square:
             print("")
 
     def __str__(self):
-        """Returns a string to print"""
+        """Defines the string to print
+        Returns:
+            The string to print
+        """
         retstr = ""
         for ypos in range(self.position[1]):
             retstr += "\n"
