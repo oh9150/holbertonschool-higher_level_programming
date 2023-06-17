@@ -102,6 +102,10 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Returns a new rectangle with both dimensions set to size
+        Args:
+        size (int): the size of the square
+        """
         return cls(size, size)
 
     def __str__(self):
