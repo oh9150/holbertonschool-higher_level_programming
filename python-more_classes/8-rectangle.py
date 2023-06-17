@@ -81,7 +81,7 @@ class Rectangle:
         """
         if self.width > 0 and self.height > 0:
             return (self.height * 2) + (self.width * 2)
-        return 0i
+        return 0
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
