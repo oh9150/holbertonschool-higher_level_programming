@@ -3,7 +3,9 @@
 
 
 class Rectangle:
-    """Defines a rectangle"""
+    """Defines a rectangle
+    Attributes:
+        number_of_instances (int): the ammount of current rectangle instances"""
 
     number_of_instances = 0
 
@@ -13,7 +15,7 @@ class Rectangle:
         """
         self.height = height
         self.width = width
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """Prints "Bye rectangle..." when an instance of this class, and
@@ -21,7 +23,7 @@ class Rectangle:
         is being deleted.
         """
         print("Bye rectangle...")
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):
