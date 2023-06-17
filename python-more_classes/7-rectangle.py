@@ -93,7 +93,7 @@ class Rectangle:
             return retstr
         for height in range(self.height):
             for width in range(self.width):
-                retstr += str(print_symbol)
+                retstr += str(self.print_symbol)
             retstr += "\n"
         return retstr[:-1]
 
