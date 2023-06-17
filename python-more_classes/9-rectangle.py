@@ -104,7 +104,9 @@ class Rectangle:
     def square(cls, size=0):
         """Returns a new rectangle with both dimensions set to size
         Args:
-        size (int): the size of the square
+            size (int): the size of the square
+        Returns:
+            A new square of size @size
         """
         return cls(size, size)
 
