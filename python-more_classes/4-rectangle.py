@@ -77,7 +77,7 @@ class Rectangle:
             for width in range(self.width):
                 retstr += "#"
             retstr += "\n"
-        return retstr
+        return retstr[:-1]
 
     def __repr__(self):
         """Returns the repr() representation of the object
