@@ -5,7 +5,8 @@
 class Rectangle:
     """Defines a rectangle
     Attributes:
-        number_of_instances (int): the ammount of current rectangle instances"""
+        number_of_instances (int): the ammount of current rectangle instances
+    """
 
     number_of_instances = 0
 
