@@ -84,4 +84,5 @@ class Rectangle:
         Returns:
             The repr() representation of the object
         """
+        return "Rectangle({}, {})".format(self.width, self.height)
 
