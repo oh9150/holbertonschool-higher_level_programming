@@ -71,7 +71,7 @@ class Rectangle:
             The string to print
         """
         retstr = ""
-        if self.height > 0 and self.width > 0:
+        if self.height <= 0 or self.width <= 0:
             return retstr
         for height in range(self.height):
             for width in range(self.width):
@@ -85,4 +85,3 @@ class Rectangle:
             The repr() representation of the object
         """
         return "Rectangle({}, {})".format(self.width, self.height)
-
