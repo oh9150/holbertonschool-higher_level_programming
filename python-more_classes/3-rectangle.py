@@ -78,10 +78,3 @@ class Rectangle:
                 retstr += "#"
             retstr += "\n"
         return retstr
-
-    def __repr__(self):
-        """Returns the repr() representation of the object
-        Returns:
-            The repr() representation of the object
-        """
-
