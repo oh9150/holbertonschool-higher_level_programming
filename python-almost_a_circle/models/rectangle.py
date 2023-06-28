@@ -15,7 +15,7 @@ class Rectangle(Base):
             y (int): The y position of the rectangle
             id (int): The id of the rectangle
         """
-        self.width = width
+        self.width = widwth
         self.height = height
         self.x = x
         self.y = y
@@ -28,8 +28,13 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """Setter for the width property"""
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """Getter for the height property"""
@@ -37,6 +42,11 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """Setter for the height property"""
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -46,6 +56,11 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Setter for the x property"""
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must >= 0")
         self.__x = value
 
     @property
@@ -55,4 +70,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Setter for the y property"""
+        if type(value) != int:
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must >= 0")
         self.__y = value
