@@ -28,6 +28,13 @@ class Rectangle(Base):
         """
         return self.height * self.width
 
+    def display(self):
+        """Prints in stdout the instance with the character '#'"""
+        for row in range(self.height):
+            for col in range(self.width):
+                print("#", end="")
+            print("")
+
     @property
     def width(self):
         """Getter for the width property"""
