@@ -15,7 +15,7 @@ class Rectangle(Base):
             y (int): The y position of the rectangle
             id (int): The id of the rectangle
         """
-        self.width = widwth
+        self.width = width
         self.height = height
         self.x = x
         self.y = y
