@@ -47,6 +47,20 @@ class Rectangle(Base):
                                                        self.width,
                                                        self.height)
 
+    def update(self, *args):
+        arg_count = 0
+        for arg in args:
+            if arg_count == 0:
+                self.id = arg
+            elif arg_count == 1:
+                self.width = arg
+            elif arg_count == 2:
+                self.height = arg
+            elif arg_count == 3:
+                self.x = arg
+            elif arg_count == 4:
+                self.y = arg
+
     @property
     def width(self):
         """Getter for the width property"""
