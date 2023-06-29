@@ -30,7 +30,11 @@ class Rectangle(Base):
 
     def display(self):
         """Prints in stdout the instance with the character '#'"""
+        for y in range(self.y):
+            print("")
         for row in range(self.height):
+            for x in range(self.x):
+                print(" ", end="")
             for col in range(self.width):
                 print("#", end="")
             print("")
