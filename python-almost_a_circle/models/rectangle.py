@@ -48,6 +48,15 @@ class Rectangle(Base):
                                                        self.height)
 
     def update(self, *args):
+        """Updates the rectangle
+        Args:
+            args (ints): Updated attribute values:
+                1st: New id
+                2nd: New Width
+                3rd: New height
+                4th: New xpos
+                5th: New ypos
+        """
         arg_count = 0
         for arg in args:
             if arg_count == 0:
@@ -60,6 +69,7 @@ class Rectangle(Base):
                 self.x = arg
             elif arg_count == 4:
                 self.y = arg
+            arg_count += 1
 
     @property
     def width(self):
