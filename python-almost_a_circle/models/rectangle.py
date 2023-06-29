@@ -47,7 +47,7 @@ class Rectangle(Base):
                                                        self.width,
                                                        self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates the rectangle
         Args:
             args (ints): Updated attribute values:
@@ -56,20 +56,35 @@ class Rectangle(Base):
                 3rd: New height
                 4th: New xpos
                 5th: New ypos
+            kwargs (ints):
+
         """
-        arg_count = 0
-        for arg in args:
-            if arg_count == 0:
-                self.id = arg
-            elif arg_count == 1:
-                self.width = arg
-            elif arg_count == 2:
-                self.height = arg
-            elif arg_count == 3:
-                self.x = arg
-            elif arg_count == 4:
-                self.y = arg
-            arg_count += 1
+        if args and len(args) > 0:
+            arg_count = 0
+            for arg in args:
+                if arg_count == 0:
+                    self.id = arg
+                elif arg_count == 1:
+                    self.width = arg
+                elif arg_count == 2:
+                    self.height = arg
+                elif arg_count == 3:
+                    self.x = arg
+                elif arg_count == 4:
+                    self.y = arg
+                arg_count += 1
+        else:
+            for key, value in kwargs.iteritems():
+                if key == "id":
+                    super().__init__(value)
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
 
     @property
     def width(self):
