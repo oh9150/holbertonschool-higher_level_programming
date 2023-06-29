@@ -56,8 +56,7 @@ class Rectangle(Base):
                 3rd: New height
                 4th: New xpos
                 5th: New ypos
-            kwargs (ints):
-
+            kwargs (ints): key to value pairs
         """
         if args and len(args) > 0:
             arg_count = 0
@@ -74,7 +73,7 @@ class Rectangle(Base):
                     self.y = arg
                 arg_count += 1
         else:
-            for key, value in kwargs.iteritems():
+            for key, value in kwargs.items():
                 if key == "id":
                     super().__init__(value)
                 elif key == "width":
