@@ -92,6 +92,7 @@ class Rectangle(Base):
                 "id": self.id,
                 "height": self.height,
                 "width": self.width}
+
     @property
     def width(self):
         """Getter for the width property"""
