@@ -41,4 +41,4 @@ class Base:
         """
         with open(cls.__name__ + ".json", "w") as f:
            list_dicts = list(map(lambda x: x.to_dictionary(), list_objs))
-           f.write(cls.to_json_string(list_dicts))
+           f.write(Base.to_json_string(list_dicts))
