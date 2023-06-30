@@ -50,7 +50,7 @@ class Base:
         """
         if cls.__name__ == "Rectangle":
             new_obj = cls(1, 1)
-        else cls.__name__ == "Square":
+        elif cls.__name__ == "Square":
             new_obj = cls(1)
         new_obj.update(**dictionary)
         return new_obj
