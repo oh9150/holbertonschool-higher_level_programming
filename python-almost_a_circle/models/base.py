@@ -40,5 +40,5 @@ class Base:
             list_objs: A list of objects of type @Rectangle or @Square
         """
         with open(cls.__name__ + ".json", "w") as f:
-           list_dicts = list(map(lambda x: x.to_dictionary(), list_objs))
-           f.write(Base.to_json_string(list_dicts))
+            list_dicts = list(map(lambda x: x.to_dictionary(), list_objs))
+            f.write(Base.to_json_string(list_dicts))
