@@ -22,6 +22,40 @@ class Square(Rectangle):
                                                  self.y,
                                                  self.width)
 
+    def update(self, *args, **kwargs):
+        """Updates the square's attributes
+        Args:
+            args (ints): The new parameters
+                1. The new id for the square
+                2. The new size for the square
+                3. The new x position for the square
+                4. The new y position for the square
+        """
+        if args and len(args) > 0:
+            arg_count = 0
+            for arg in args:
+                if arg_count == 0:
+                    self.id = arg
+                elif arg_count == 1:
+                    self.width = arg
+                    self.height = arg
+                elif arg_count == 2:
+                    self.x = arg
+                elif arg_count == 3:
+                    self.y = arg
+                arg_count += 1
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "size":
+                    self.width = value
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
+
     @property
     def size(self):
         """Getter for the size property"""
