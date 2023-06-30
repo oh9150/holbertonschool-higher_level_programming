@@ -52,7 +52,7 @@ class Base:
             new_obj = cls(1, 1)
         elif cls.__name__ == "Square":
             new_obj = cls(1)
-        new_obj.update(**dictionary)
+        new_obj.update(dictionary)
         return new_obj
 
     @classmethod
@@ -66,3 +66,9 @@ class Base:
         with open(cls.__name__ + ".json", "w") as f:
             list_dicts = list(map(lambda x: x.to_dictionary(), list_objs))
             f.write(Base.to_json_string(list_dicts))
+
+    @classmethod
+    def load_from_file(cls):
+        with open(cls.__name__ + ".json") as f:
+            list_dicts = cls.from_json_string(f.read())
+            return list(map(lambda x: cls.create(x), list_dicts))
