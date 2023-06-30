@@ -31,6 +31,14 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string, if the string is empty,
+        returns an empty list"""
+        if json_string = "":
+            return []
+        return json.loads(json_string)
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Converts all the objects in @list_objs to a dictionary using the
