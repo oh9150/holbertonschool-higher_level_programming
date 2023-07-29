@@ -1,6 +1,7 @@
+-- Creates a table "second_table" and adds multiple rows
 CREATE TABLE IF NOT EXISTS second_table (
 	id INT,
-	VARCHAR(256) name,
+	name VARCHAR(256),
 	score INT
 );
 INSERT INTO second_table (id, name, score)
