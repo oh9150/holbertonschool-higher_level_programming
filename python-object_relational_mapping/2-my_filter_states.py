@@ -10,4 +10,3 @@ if __name__ == "__main__":
     for state in cur.fetchall():
         if state[1] == sys.argv[4]:
             print(state)
-
