@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# Lists all states with their name starting with "N"
+"""
+Lists all states with their name starting with "N"
+Usage: ./2-my_filter_states.py <mysql user> <mysql password> <db> <state>
+"""
 import sys
 import MySQLdb
 
