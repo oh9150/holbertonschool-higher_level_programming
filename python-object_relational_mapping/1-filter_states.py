@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Lists all states with their name starting with "N"
+
 import sys
 import MySQLdb
 
@@ -10,3 +11,5 @@ if __name__ == "__main__":
     for state in cur.fetchall():
         if state[1][0] == "N":
             print(state)
+    cur.close()
+    db.close()
