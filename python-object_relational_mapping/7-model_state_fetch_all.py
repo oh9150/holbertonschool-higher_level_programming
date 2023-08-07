@@ -6,6 +6,7 @@ Usage: ./7-model_state_fetch_all <mysql user> <mysql passwd> <db>
 import sys
 from sqlalchemy import create_engine
 from model_state import State
+from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
