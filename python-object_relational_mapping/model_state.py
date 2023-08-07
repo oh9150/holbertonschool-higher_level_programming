@@ -2,7 +2,7 @@
 """
 Defines a class State and an object Base that's an instance of declarative_base
 """
-from sqlalchemy import Column, Integer, Stringi, MetaData
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
 
 mymetadata = MetaData()
