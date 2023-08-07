@@ -24,5 +24,5 @@ if __name__ == "__main__":
             found = True
             break
 
-    if found == False:
+    if found is False:
         print("Not found")
